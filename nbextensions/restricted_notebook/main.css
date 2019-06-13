@@ -1,0 +1,46 @@
+/* Hide toolbar*/
+div#menubar {
+	display: none !important;
+}
+
+#run_int.btn-group {
+	display: none !important;
+}
+
+#insert_above_below.btn-group {
+	display: none !important;
+}
+
+#cut_copy_paste.btn-group {
+	display: none !important;
+}
+
+#move_up_down.btn-group {
+	display: none !important;
+}
+
+#cell_type {
+	display: none !important;
+}
+
+#cmd_palette.btn-group {
+	display: none !important;
+}
+
+/* Make sure run button is displayed
+   next to code cells */
+div.run_this_cell {
+	display: block;
+}
+
+/* Remove name to avoid renaming */
+span#notebook_name {
+	display: none;
+}
+
+span#notebook_title {
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 20px;
+}

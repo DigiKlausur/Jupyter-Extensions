@@ -1,0 +1,6 @@
+Type: IPython Notebook Extension
+Compatibility: 5.x
+Name: Restricted Notebook
+Main: main.js
+Link: README.md
+Description: Provides a restricted view of a notebook for exams or assignments
