@@ -1,5 +1,5 @@
 # Jupyter-Extensions
-Collection of Jupyter Extensions
+Collection of Jupyter Notebook Extensions
 
 There are three types of extensions:
 - nbextension
