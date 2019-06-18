@@ -23,7 +23,7 @@ jupyter nbextension enable name_of_extension/entry_point --sys-prefix --section=
 
 For the restricted notebook extension (entry point is main.js):
 ```
-jupyter nbextension enable restricted_notebook/main --sys-prefix --section='common'
+jupyter nbextension enable restricted_notebook/main --sys-prefix
 ```
 
 To disable just replace enable by disable.
