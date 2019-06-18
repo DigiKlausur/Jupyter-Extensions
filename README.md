@@ -1,31 +1,13 @@
 # Jupyter-Extensions
 Collection of Jupyter Extensions
 
+There are three types of extensions:
+- nbextension
+- server extension
+- combined extension
 
-## nbextensions
+Nbextensions are front-end extensions written in Javascript and CSS. They customize the notebook view and can be used to hide cells, add buttons or toolbars etc.
 
-To install an nbextension navigate to the folder nbextensions of the repository in a terminal:
-```
-jupyter nbextension install name_of_extension --sys-prefix
-```
-Example for the restricted notebook extension:
-```
-jupyter nbextension install restricted_notebook --sys-prefix
+Server extensions are back-end extensions written in Python using the tornado framework and expose a RESTful API using handlers.
 
-```
-
-To enable the extension for the notebook view:
-```
-jupyter nbextension enable name_of_extension/entry_point --sys-prefix
-```
-To enable for each page (e.g. also the file browser):
-```
-jupyter nbextension enable name_of_extension/entry_point --sys-prefix --section='common'
-```
-
-For the restricted notebook extension (entry point is main.js):
-```
-jupyter nbextension enable restricted_notebook/main --sys-prefix --section='common'
-```
-
-To disable just replace enable by disable.
+Combined extensions consist of an nbextension together with a server extension (e.g. press a button to call a service).
