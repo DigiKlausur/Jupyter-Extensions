@@ -65,6 +65,40 @@ define([
         }
 	}
 
+    var to_markdown = function (index) {
+        var i = this.index_or_selected(index);
+        if (this.is_valid_cell_index(i)) {
+            var source_cell = this.get_cell(i);
+
+            if (source_cell.is_editable()) {
+                var target_cell = this.insert_cell_below('markdown',i);
+                var text = source_cell.get_text();
+
+                if (text === source_cell.placeholder) {
+                    text = '';
+                }
+                // metadata
+                target_cell.metadata = source_cell.metadata;
+                target_cell.attachments = source_cell.attachments;
+
+                // We must show the editor before setting its contents
+                target_cell.unrender();
+                target_cell.set_text(text);
+                // make this value the starting point, so that we can only undo
+                // to this state, instead of a blank cell
+                target_cell.code_mirror.clearHistory();
+                source_cell.element.remove();
+                this.select(i);
+                if ((source_cell instanceof textcell.TextCell) && source_cell.rendered) {
+                    target_cell.render();
+                }
+                var cursor = source_cell.code_mirror.getCursor();
+                target_cell.code_mirror.setCursor(cursor);
+                this.set_dirty(true);
+            }
+        }
+    };
+
 	var insert_cell_at_index = function (type, index) {
 
         var ncells = this.ncells();
@@ -189,6 +223,7 @@ define([
 
         Notebook.prototype.to_multiplicechoice = to_multiplicechoice;
         Notebook.prototype.cells_to_multiplechoice = cells_to_multiplechoice;
+        Notebook.prototype.to_markdown = to_markdown;
         Notebook.prototype.insert_cell_at_index = insert_cell_at_index;
         Notebook.prototype.select = select;
 
