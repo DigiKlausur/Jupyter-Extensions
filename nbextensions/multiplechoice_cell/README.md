@@ -16,3 +16,17 @@ The selected option(s) are stored in the cells metadata:
       "choices": ["selected_option_1", "selected_option_2"]
     }
 ```
+
+## Example
+
+The unrendered cell looks like this:
+
+![unrendered cell](img/mc_unrendered.png)
+
+The rendered cell with single select:
+
+![rendered single select cell](img/mc_rendered_radio.png)
+
+The rendered cell with multi select:
+
+![rendered multi select cell](img/mc_rendered_checkbox.png)
