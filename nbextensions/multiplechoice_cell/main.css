@@ -1,0 +1,25 @@
+#cell_type {
+  display: none !important;
+}
+
+/*
+#extended_cell_type {
+	background-color: red;
+}*/
+
+.mc_options {
+	background-color: lightblue;
+}
+
+.mc_label {
+	padding: 0.2em;
+}
+
+.mc_select {
+	float: right;
+	padding-right: 0.5em;
+}
+
+.mc_cell {
+	border-left: 2px solid lightblue;
+}
