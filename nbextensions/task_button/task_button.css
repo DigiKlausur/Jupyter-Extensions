@@ -1,0 +1,29 @@
+#taskbar {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#task_title {
+	font-size: 2em;
+}
+
+#prev_task {
+    float: left;
+}
+
+#next_task {
+    float: right;
+}
+
+.task_button {
+    background-color: orange;
+    border: 1px solid gray;
+    height: 2em;
+    font-size: 1em;
+}
+
+.task_button:disabled {
+	background-color: gray;
+}
+
