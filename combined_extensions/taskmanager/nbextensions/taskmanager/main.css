@@ -1,0 +1,16 @@
+div.top_cell {
+	margin-top: 1em;
+}
+
+div.bottom_cell {
+	margin-bottom: 3em;
+}
+
+div.task_cell {
+	background-color: #f5f8ff;
+}
+
+div.inner_cell {
+	background-color: #ffffff;
+}
+

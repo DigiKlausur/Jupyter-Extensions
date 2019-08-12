@@ -1,0 +1,131 @@
+{
+  "tasks": [
+    {
+      "cells": [
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": false,
+              "grade_id": "cell-274dc5c8ea78332a",
+              "locked": true,
+              "schema_version": 1,
+              "solution": false
+            }
+          },
+          "text": [
+            "### Short answer question\n\nPlease put your question here"
+          ],
+          "type": "markdown"
+        },
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": true,
+              "grade_id": "cell-80ca0b9581fcb022",
+              "locked": false,
+              "points": 10,
+              "schema_version": 1,
+              "solution": true
+            },
+            "trusted": true
+          },
+          "text": [
+            "### Short answer solution"
+          ],
+          "type": "code"
+        }
+      ],
+      "name": "Short Answer"
+    },
+    {
+      "cells": [
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": false,
+              "grade_id": "cell-26a1f3c2608f4e62",
+              "locked": true,
+              "schema_version": 1,
+              "solution": false
+            }
+          },
+          "text": [
+            "### Code question"
+          ],
+          "type": "markdown"
+        },
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": true,
+              "grade_id": "cell-5d78d15bc54d5bad",
+              "locked": false,
+              "points": 0,
+              "schema_version": 1,
+              "solution": true
+            },
+            "trusted": true
+          },
+          "text": [
+            "### Code answer"
+          ],
+          "type": "code"
+        }
+      ],
+      "name": "Code (manual)"
+    },
+    {
+      "cells": [
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": false,
+              "grade_id": "cell-e232e9057548913b",
+              "locked": true,
+              "schema_version": 1,
+              "solution": false
+            }
+          },
+          "text": [
+            "### Code question with test"
+          ],
+          "type": "markdown"
+        },
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": false,
+              "grade_id": "cell-e481643043a5760e",
+              "locked": false,
+              "schema_version": 1,
+              "solution": true
+            },
+            "trusted": true
+          },
+          "text": [
+            "### Autograded code answer"
+          ],
+          "type": "code"
+        },
+        {
+          "metadata": {
+            "nbgrader": {
+              "grade": true,
+              "grade_id": "cell-9fe51c96e38597e3",
+              "locked": true,
+              "points": 0,
+              "schema_version": 1,
+              "solution": false
+            },
+            "trusted": true
+          },
+          "text": [
+            "### Autograder test"
+          ],
+          "type": "code"
+        }
+      ],
+      "name": "Code (autograded)"
+    }
+  ]
+}
