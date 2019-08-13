@@ -3,15 +3,6 @@ from notebook.base.handlers import IPythonHandler
 from . import handlers, api_handlers
 from jinja2 import Environment, FileSystemLoader
 
-def init_tornado_settings(webapp):
-    jinja_env = Environment(loader=FileSystemLoader([handlers.template_path]))
-
-    tornado_settings = dict(
-        hbrs_jinja2_env = jinja_env
-    )
-
-    webapp.settings.update(tornado_settings)
-
 def init_handlers(webapp):
     h = []
     h.extend(handlers.default_handlers)
@@ -31,6 +22,4 @@ def load_jupyter_server_extension(nb_server_app):
         nb_server_app (NotebookWebApplication): handle to the Notebook webserver instance.
     """
     web_app = nb_server_app.web_app
-
-    init_tornado_settings(web_app)
     init_handlers(web_app)
