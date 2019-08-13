@@ -166,7 +166,7 @@ define([
 
 	var new_task = function () {
 		var button = $('<button>')
-			.append('New Task')
+			.append('Save Task Preset')
 			.addClass('btn btn-default')
 			.click(function () {
 				new_task_dialog();
@@ -194,7 +194,7 @@ define([
         dropdown
             .append($('<option>')
                 .attr('id', 'task_header')
-                .text('Save Task Preset'));
+                .text('Insert Task'));
 
         model.load_tasks(function (data, status, xhr) {
         	var tasks = data.tasks;
