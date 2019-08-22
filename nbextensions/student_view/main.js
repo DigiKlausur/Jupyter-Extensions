@@ -16,12 +16,22 @@ define([
 
     "use strict";
 
+    function displayLineNumbersByDefault() {
+        Jupyter.notebook.get_cells().map(function(c) {
+            if (c.cell_type === 'code') {
+                c.code_mirror.setOption('lineNumbers', true);
+            }
+        });
+        Jupyter.notebook.line_numbers = true;
+    }
+
     function initialize() {
         restricted_nb.initialize();
         run_control.initialize();
         task_button.initialize();
         exam_toolbar.initialize();
         mc_cell.initialize();
+        displayLineNumbersByDefault();
     }
 
     var load_ipython_extension = function () {
