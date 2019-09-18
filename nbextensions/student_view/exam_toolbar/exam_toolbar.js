@@ -63,7 +63,7 @@ define([
     }
 
     var remove_classes = function(cell) {
-    	if (cell.celltoolbar !== undefined) {
+    	if (cell.celltoolbar !== undefined && cell.celltoolbar !== null) {
             if (cell.celltoolbar.inner_element.hasClass(highlight)) {
                 cell.celltoolbar.inner_element.removeClass(highlight);
             } else if (cell.celltoolbar.inner_element.hasClass(minimized)) {
