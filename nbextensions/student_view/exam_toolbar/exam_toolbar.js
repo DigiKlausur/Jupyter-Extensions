@@ -154,9 +154,10 @@ define([
         		});
         		$(div).append($('<span/>').append(btn));
         		add_hightlight(cell);
-        	} else if (cell.cell_type === 'markdown') {
+        	} else if (cell.cell_type === 'markdown' && !cell.rendered) {
         		var btn = create_button('Preview', 'preview', function() {
         			cell.execute();
+                    celltoolbar.rebuild();
         		});
         		$(div).append($('<span/>').append(btn));
         		add_hightlight(cell);
@@ -175,7 +176,7 @@ define([
         		remove_classes(cell);
         		add_hidden(cell);
         		return;
-        	} else if (cell.cell_type === 'markdown') {
+        	} else if (cell.cell_type === 'markdown' && cell.rendered) {
         		var btn = create_button('Edit', 'edit', function() {
         			cell.events.trigger('select.Cell', {'cell': cell});
 	                Jupyter.notebook.edit_mode();
