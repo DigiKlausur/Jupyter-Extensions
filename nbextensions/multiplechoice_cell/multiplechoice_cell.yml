@@ -1,6 +1,0 @@
-Type: IPython Notebook Extension
-Compatibility: 5.x
-Name: Multiple choice cell
-Main: main.js
-Link: README.md
-Description: Adds multiple choice cells to a notebook
