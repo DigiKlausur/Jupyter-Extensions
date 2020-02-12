@@ -140,7 +140,7 @@ define([
         var old_unrender = MarkdownCell.prototype.unrender;
         MarkdownCell.prototype.unrender_force = old_unrender;
         MarkdownCell.prototype.unrender = function () {
-            if (is_form_cell(cell)) {
+            if (is_form_cell(this)) {
 
             } else {
                 old_unrender.apply(this, arguments);
