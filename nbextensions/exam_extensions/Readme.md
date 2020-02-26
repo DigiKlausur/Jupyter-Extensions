@@ -1,10 +1,12 @@
 # Collection of extensions for exam mode
 
-## Form Elements
+## Extra Cells
 
-The form elements extension enables support to display multiple choice and single choice cells.
+The extra cells extension enables support to display multiple choice and single choice cells. This is already included in [our nbgrader version](https://github.com/DigiKlausur/nbgrader). 
 
-To create a multiple choice or single choice cell, you can use [our nbgrader version](https://github.com/DigiKlausur/nbgrader) together with the ```create_assignment``` toolbar. This only works on markdown cells.
+This only needs to be installed if nbgrader is not installed on the server the student works on.
+
+To create a multiple choice or single choice cell, you can use out nbgrader version.
 
 ## Restricted Tree
 
