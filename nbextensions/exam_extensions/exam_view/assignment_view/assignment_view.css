@@ -26,8 +26,11 @@
     margin-left: 2px;
 }
 
+.exam_btn:hover {
+  background-color: #fff;
+}
+
 #run.exam_btn {
-    background-color: #dddddd;
     border: none;
 }
 
