@@ -93,9 +93,9 @@ define([
                 add_hidden(cell);
                 return;
             }
-            var label = $('<span/>').append(cell.metadata.nbgrader.grade_id).addClass('cell_id');
+            //var label = $('<span/>').append(cell.metadata.nbgrader.grade_id).addClass('cell_id');
             add_highlight(cell);
-            $(div).append(label);
+            //$(div).append(label);
             if (is_extra_cell(cell)) {
                 return;
             }
@@ -141,6 +141,7 @@ define([
         ];
         CellToolbar.register_preset(preset_name, preset, Jupyter.notebook);
         CellToolbar.activate_preset(preset_name);
+        Jupyter.CellToolbar.global_show();
     }
 
     return {
