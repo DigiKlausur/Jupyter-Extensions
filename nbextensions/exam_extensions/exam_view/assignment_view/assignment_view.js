@@ -16,16 +16,12 @@ define([
     var minimized = 'minimized';
     var CodeCell = codecell.CodeCell;
 
-    // trigger an event when the toolbar is being rebuilt
-    CellToolbar.prototype._rebuild = CellToolbar.prototype.rebuild;
-    CellToolbar.prototype.rebuild = function () {
-        events.trigger('toolbar_rebuild.CellToolbar', this.cell);
-        this._rebuild();
-    };
-
-    // remove nbgrader class when the cell is either hidden or rebuilt
     events.on("global_hide.CellToolbar toolbar_rebuild.CellToolbar", function (evt, cell) {
-        remove_classes(cell);
+        if (cell.celltoolbar.inner_element.hasClass(highlight)) {
+            cell.celltoolbar.inner_element.removeClass(highlight);
+        } else if (cell.celltoolbar.inner_element.hasClass(minimized)) {
+            cell.celltoolbar.inner_element.removeClass(minimized);
+        }
     });
 
     var is_editable = function(cell) {
@@ -93,9 +89,7 @@ define([
                 add_hidden(cell);
                 return;
             }
-            //var label = $('<span/>').append(cell.metadata.nbgrader.grade_id).addClass('cell_id');
             add_highlight(cell);
-            //$(div).append(label);
             if (is_extra_cell(cell)) {
                 return;
             }
