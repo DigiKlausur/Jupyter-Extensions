@@ -5,6 +5,24 @@ define([
 ) {
     "use strict";
 
+    function is_test_cell(cell) {
+        return is_nbgrader_cell(cell) && 
+               cell.metadata.nbgrader.locked && 
+               cell.metadata.nbgrader.grade && 
+               !cell.metadata.nbgrader.solution;
+    }
+
+    function is_description_cell(cell) {
+        return is_nbgrader_cell(cell) &&
+               cell.metadata.nbgrader.locked &&
+               !cell.metadata.nbgrader.grade &&
+               !cell.metadata.nbgrader.solution;
+    }
+
+    function is_nbgrader_cell(cell) {
+        return cell.metadata.hasOwnProperty('nbgrader');
+    }
+
     var is_init_cell = function (cell) {
         if (cell.metadata.run_control === undefined) {
             return false;
@@ -69,7 +87,9 @@ define([
         is_frozen_cell: is_frozen_cell,
         is_multiple_choice_cell: is_multiple_choice_cell,
         load_css: load_css,
-        get_cell_by_id: get_cell_by_id
+        get_cell_by_id: get_cell_by_id,
+        is_test_cell: is_test_cell,
+        is_description_cell: is_description_cell
     }
 
     return utils;

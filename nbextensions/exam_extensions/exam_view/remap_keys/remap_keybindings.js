@@ -5,7 +5,7 @@ define([
 		remap: function() {
 			console.log('Rebinding of keyboard shortcuts.!');
 
-			var shortcuts = ['x', 'c', 'v', 'a', 'b', 'shift-v',
+			let shortcuts = ['x', 'c', 'v', 'a', 'b', 'shift-v',
 							 'shift-m', 'y', 'm', 'r', 'shift-enter', 'alt-enter',
 							 'ctrl-shift-f', 'ctrl-shift-p', 'p', 'd,d'];
 

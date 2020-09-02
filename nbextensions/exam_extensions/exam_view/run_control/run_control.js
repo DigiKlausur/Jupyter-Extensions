@@ -23,7 +23,7 @@ define([
 
         MarkdownCell.prototype.unrender = function () {
             // console.log('[Freeze] patched unrender applied');
-            if (!utils.is_frozen_cell(this)) {
+            if (!utils.is_frozen_cell(this) && !utils.is_description_cell(cell)) {
                 old_unrender.apply(this, arguments);
             }
         };
@@ -62,7 +62,7 @@ define([
 
     var update_visibility = function () {
         Jupyter.notebook.get_cells().forEach(function(cell) {
-            if (utils.is_hidden_cell(cell)) {
+            if (utils.is_hidden_cell(cell) || utils.is_test_cell(cell)) {
                 cell.element.hide();
             } else if (utils.is_hidden_input_cell(cell)) {
                 cell.element.find("div.input").hide();
