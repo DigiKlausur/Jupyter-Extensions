@@ -145,17 +145,23 @@ define([
             let hashcode_html = window.location.href.split('.ipynb')[0] + '_hashcode.html';
             let body = $('<div/>');
 
-            body.append($('<h4/>').text('Your Hashcode:'));
-            body.append($('<pre/>').text(data['hashcode']));
-
             body.append($('<h4/>').text('Your Timestamp:'));
             body.append($('<pre/>').text(data['timestamp'].split('.')[0]));
 
-            body.append($('<p/>')
-                    .append('You can verify your submission ')
-                    .append($('<a/>').attr('href', hashcode_html).text('here'))
-                    .append('.')
-            );
+            if (data.hasOwnProperty('hashcode') && data.hashcode.length > 0) {
+                body.append($('<h4/>').text('Your Hashcode:'));
+                body.append($('<pre/>').text(data['hashcode']));
+
+                
+
+                body.append($('<p/>')
+                        .append('You can verify your submission ')
+                        .append($('<a/>').attr('href', hashcode_html).text('here'))
+                        .append('.')
+                );
+            }
+
+            
 
             dialog.modal({
                 keyboard_manager: Jupyter.keyboard_manager,
