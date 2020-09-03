@@ -2,11 +2,12 @@ define([
     'require',
     'jquery',
     'base/js/namespace',
+    'base/js/utils',
     './submit/submit',
     './assignment_view/assignment_view',
     './run_control/run_control',
-    './remap_keys/remap_keybindings'
-], function (require, $, Jupyter, submit_tools, assignmentview, run_control, remap_keys) {
+    './remap_keys/remap_keybindings',
+], function (require, $, Jupyter, utils, submit_tools, assignmentview, run_control, remap_keys) {
 
     'use strict';
 
@@ -45,7 +46,9 @@ define([
 
         items.forEach(function (item) {
             div.append(item);
-        })
+        });
+
+        
         
         let submit = new submit_tools.Submit();
         let submit_btn = $('<button/>')
@@ -63,6 +66,13 @@ define([
 
         submit_btn.hide();
         div.append(submit_btn);
+
+        let help = $('<button/>')
+            .attr('id', 'e2xhelp')
+            .click(() => window.open('/e2xhelp/base/html/en', '_blank'));
+        help.append($('<span/>').text('Help'));
+        help.append($('<i/>').addClass('fa fa-question'));
+        div.append(help);
 
         div.insertAfter($('#maintoolbar-container'));
     }

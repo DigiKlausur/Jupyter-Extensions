@@ -23,7 +23,7 @@ define([
 
         MarkdownCell.prototype.unrender = function () {
             // console.log('[Freeze] patched unrender applied');
-            if (!utils.is_frozen_cell(this) && !utils.is_description_cell(cell)) {
+            if (!utils.is_frozen_cell(this) && !utils.is_description_cell(this)) {
                 old_unrender.apply(this, arguments);
             }
         };
