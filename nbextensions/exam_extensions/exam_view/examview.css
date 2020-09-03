@@ -56,6 +56,15 @@
   padding-left: .5em;
 }
 
+#e2xtoolbar #e2xhelp {
+  float: right;
+  border-left: 1px solid #dae4e7;
+}
+
+#e2xhelp i {
+  padding-left: .5em;
+}
+
 #nb_name {
   padding-left: 1em;
   font-size: 1.5em;
